@@ -58,6 +58,10 @@ public class Oiseau {
         Log.d("bird", "bird bird sku");
     }
 
+    public ImageView getBirdView() {
+        return birdView;
+    }
+
     public void move() {
 
         float x = birdView.getX();
