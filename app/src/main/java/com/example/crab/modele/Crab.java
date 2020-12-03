@@ -60,6 +60,7 @@ public class Crab implements SensorEventListener {
             context.gameCrab.crabe.imageCrabView.setY(newY);
             screenColision();
             ballonColision();
+            oiseauColision();
 
             Log.e("position", "posX=" + context.gameCrab.crabe.imageCrabView.getX() + "postY=" + context.gameCrab.crabe.imageCrabView.getY());
 
@@ -94,6 +95,19 @@ public class Crab implements SensorEventListener {
 
         }
 
+    }
+    public void  oiseauColision(){
+        for (int i = 0; i < context.gameCrab.listOiseau.size(); i++) {
+            if (context.gameCrab.listOiseau.get(i).getBirdView().getY() >= context.gameCrab.crabe.imageCrabView.getY() && context.gameCrab.listOiseau.get(i).getBirdView().getY() <= (context.gameCrab.crabe.imageCrabView.getY() + context.gameCrab.crabe.imageCrabView.getHeight() / 2) && context.gameCrab.listOiseau.get(i).getBirdView().getX() > context.gameCrab.crabe.imageCrabView.getX() && context.gameCrab.listOiseau.get(i).getBirdView().getX() < (context.gameCrab.crabe.imageCrabView.getX() + context.gameCrab.crabe.imageCrabView.getWidth() / 2)) {
+                context.gameCrab.listOiseau.get(i).getBirdView().setX(context.gameCrab.crabe.imageCrabView.getY()-1);
+                context.gameCrab.level.removeLife();
+
+                Log.e("lose", "fc bird");
+
+            }
+
+
+        }
     }
 
     @Override
