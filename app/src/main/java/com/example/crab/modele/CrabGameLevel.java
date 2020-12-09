@@ -50,9 +50,7 @@ public class CrabGameLevel {
         return lives;
     }
 
-    public List<Couleur> getListDeJeu() {
-        return listDeJeu;
-    }
+
 
     public void removeLife() {
         lives--;

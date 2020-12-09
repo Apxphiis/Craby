@@ -54,7 +54,7 @@ public class GameCrab extends AppCompatActivity {
 
             hardGame();
         }
-        if (level.getLives() == 0 || listBallon.size() == 0 || listBallon.isEmpty()) {
+        if (level.getLives() == 0 || listBallon.size() == 0 ) {
             level.end();
             endGame();
         }
